@@ -2,12 +2,11 @@
 python3.3 parser.py
 
 fname="res"
-
 rm -f "$fname"
-
 outfile="../../$fname"
 output="../$fname"
 testdir=$(exec date +%s)
+
 while [ -e ${testdir} ]
 do
 	testdir=$(exec date +%s)

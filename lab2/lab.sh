@@ -94,5 +94,4 @@ while ( ( `echo -n "$FILE1" | wc -m` >= 1 ) && ( `echo -n "$FILE2" | wc -m` >= 0
 		set FILE2=""
 	endif
 end
-
 exit $code

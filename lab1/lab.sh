@@ -86,5 +86,4 @@ do
 	let i++
 	FILE2="${!i}"
 done
-
 exit $code

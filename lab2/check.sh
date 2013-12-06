@@ -100,18 +100,3 @@ cd "../"
 sudo rm -rf "${testdir}"
 
 libreoffice --calc "$fname"
-
-#	set params=("" "" "" "" "" "" "" "" "")
-#	set some=`eval "cat -E < $file"`
-#	set i = 1
-#	set pos = 1
-#	while ( $i <= $#some )
-#		set params[$pos]="${params[$pos]}"" ""${some[${i}]}"
-#		if ( `expr "$params[$pos]" : '.*\$'` != 0 ) then
-#			
-#			@ pos ++
-#			echo $params[$pos]
-#			exit 0
-#		endif
-#		@ i ++
-#	end

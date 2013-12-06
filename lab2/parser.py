@@ -10,6 +10,7 @@ with open("csv",'w') as f:
 	for a in tst:
 		_in = a["Входные параметры"]
 		_out = a["Ожидаемые выходные данные"]
+
 		f.write('"' + _in["Номер теста"] + '"' + ',')
 		f.write('"' + _in["Подготовка среды"] + '"' + ',')
 		f.write('"' + _in["Проверка среды"] + '"' + ',')
@@ -19,6 +20,7 @@ with open("csv",'w') as f:
 		f.write('"' + _out["Сообщение"] + '"' + ',')
 		f.write('"' + _out["Код возврата"] + '"' + ',')
 		f.write('"' + _out["Объекты ФС"] + '"' + ',\n')
+
 		with open("test" + _in["Номер теста"], 'w') as testfile:
 			testfile.write(_in["Номер теста"] + '\n')
 			testfile.write(_in["Подготовка среды"] + '\n')

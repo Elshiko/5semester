@@ -1,4 +1,4 @@
 5semester
 =========
 
-OSlab
+OSlab & Parallel

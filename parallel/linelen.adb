@@ -92,16 +92,16 @@ procedure LineLen is
 	end Calc;
 
 begin
-	put ( Calc (-2.0, 2.0, 0.1e-3), spaces, symb);
+	put("f(x) = sqrt(4.0 - x * x) ");
+	new_line;
+	put ("Len = ");
+	put( Calc (-2.0, 2.0, 0.1e-3), spaces, symb);
 end LineLen;
 
---6.2821893692E+00
+--Минаков Александр
+--K5-224
 
+--Вывод программы
 
-------------------
---(program exited with code: 0)
---Press return to continue
-
-
-
-
+--f(x) = sqrt(4.0 - x * x) 
+--Len = 6.2821893692E+00

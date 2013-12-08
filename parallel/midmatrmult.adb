@@ -6,12 +6,13 @@ with Ada.Float_Text_IO;
 use Ada.Float_Text_IO;
 with Ada.Integer_Text_IO;
 use Ada.Integer_Text_IO;
+
 with Ada.Numerics.Discrete_Random;
 
 procedure midmatrmult is
 	flag : boolean := true;
-	dim : constant integer := 100;
-	eps : float := 0.1;
+	dim : constant integer := 10;
+	eps : constant float := 0.001;
 	type vector is array (1..dim) of float;
 	type matrix is array (1..dim) of vector;
 		
@@ -97,15 +98,6 @@ procedure midmatrmult is
 		step;
 		return tmp_2;
 	end expn;
-	
-	function absolute(X : in float) return float is
-	begin
-		if ( X < 0.0 )
-		then
-			return - 1.0 * X;
-		end if;
-		return X;
-	end absolute;
 
 	procedure matr_init is
 		subtype value is Positive range 1..100;
@@ -116,7 +108,7 @@ procedure midmatrmult is
 		Rand.Reset(seed);
 		for row in 1..dim loop
 			for col in 1..dim loop
-				A(row)(col) := absolute( Float(Rand.Random(seed))/1000.0 );
+				A(row)(col) := Float(Rand.Random(seed))/1000.0;
 				B(row)(col) := A(row)(col);
 			end loop;
 		end loop;
@@ -143,11 +135,10 @@ begin
 		end loop;
 	end loop;
 	
-	flag := true;
 	for j in 1..dim loop
 		for k in 1..dim loop
-			delt := absolute(ANS2(j)(k)) - absolute(ANS1(j)(k));
-			if ( absolute(delt) > eps)
+			delt := abs(ANS2(j)(k)) - abs(ANS1(j)(k));
+			if ( abs(delt) > eps)
 			then
 				flag := false;
 			end if;

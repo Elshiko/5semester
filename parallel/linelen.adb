@@ -95,7 +95,7 @@ begin
 	put("f(x) = sqrt(4.0 - x * x) ");
 	new_line;
 	put ("Len = ");
-	put( Calc (-2.0, 2.0, 0.1e-3), spaces, symb);
+	put( Calc(-2.0, 2.0, 0.1e-3), spaces, symb);
 end LineLen;
 
 --Минаков Александр

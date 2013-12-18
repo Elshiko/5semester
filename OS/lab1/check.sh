@@ -87,7 +87,7 @@ do
 	
 	cd "../"
 	
-	rm "./test${tst}"
+	rm -rf "./test${tst}"
 	cd "${testdir}"
 	
 	let tst++
